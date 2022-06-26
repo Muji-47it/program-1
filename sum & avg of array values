@@ -3,22 +3,29 @@ using namespace std;
 class middle{
 private:
 int arr[100];
+int size;
 int num=0;
 public:
 void input()
 {
+    cout<<"enter array size"<<endl;
+    cin>>size;
     cout<<"enter values: "<<endl;
-    for(int i=0;i<6;i++)
+    for(int i=0;i<size;i++)
     cin>>arr[i];
 }
 void add()
-{for(int i=0;i<6;i++)
+{for(int i=0;i<size;i++)
  num+=arr[i];
 }
 void output()
 {
     cout<<"sum of array values"<<endl;
-    cout<<num;
+    cout<<num<<endl;
+    int avg=num/size;
+    cout<<"average value is"<<endl;
+    cout<<avg;
+    
 }
 };
 int main() {
